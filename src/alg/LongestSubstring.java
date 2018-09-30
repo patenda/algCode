@@ -13,17 +13,10 @@ import java.util.Map;
 
 public class LongestSubstring {
 	public static void main(String[] args) {
-//		System.out.println(lengthOfLongestSubstring("abcabcbb")); // //
-//		System.out.println(lengthOfLongestSubstring("bbbbb")); // //
-//		System.out.println(lengthOfLongestSubstring("")); // //
-		System.out.println(lengthOfLongestSubstring("fdjskajfhh")); // //
-//		System.out.println(lengthOfLongestSubstring("iiiiiiioooooooooooooo"));
-//		System.out.println(lengthOfLongestSubstring("aeiou"));
-//		System.out.println(lengthOfLongestSubstring("hnwnkuewhsqmgbbuqcljjivswmdkqtbxixmvtrrbljptnsnfwzqfjmafadrrwsofsbcnuvqhffbsaqxwpqcac"));
 	}
 
 	/**
-	 * * Traverse the string * Get current character * Update start // point *
+	 * Traverse the string * Get current character * Update start // point *
 	 * Update max * Put current char in map
 	 */
 	public static int lengthOfLongestSubstring(String s) {
@@ -37,7 +30,6 @@ public class LongestSubstring {
 			/* start point can be recent dup's next char or last start */
 			int newStart = map.containsKey(c) ? map.get(c) + 1 : 0;
 			start = Math.max(start, newStart); //第二个重复
-			//start = newStart;
 			/* if current str len is bigger then update */
 			max = Math.max(max, i - start + 1);
 			/* add char to map with index */
